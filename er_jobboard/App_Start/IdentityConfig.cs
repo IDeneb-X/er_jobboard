@@ -40,6 +40,7 @@ namespace er_jobboard
         {
         }
 
+        //Disable//=========================// Email//=========================
         public static ApplicationUserManager Create(IdentityFactoryOptions<ApplicationUserManager> options, IOwinContext context) 
         {
             var manager = new ApplicationUserManager(new UserStore<ApplicationUser>(context.Get<ApplicationDbContext>()));
@@ -47,7 +48,7 @@ namespace er_jobboard
             manager.UserValidator = new UserValidator<ApplicationUser>(manager)
             {
                 AllowOnlyAlphanumericUserNames = false,
-                RequireUniqueEmail = true
+                //RequireUniqueEmail = true
             };
 
             // Configure validation logic for passwords

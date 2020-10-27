@@ -20,8 +20,10 @@ namespace er_jobboard.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+ ////////////////////////////////////////////////////////////////////////////////////////
+ /////////Add custome database context for user model
         public ApplicationDbContext()
-            : base("DefaultConnection", throwIfV1Schema: false)
+            : base("JobboardDBContext", throwIfV1Schema: false)
         {
         }
 
