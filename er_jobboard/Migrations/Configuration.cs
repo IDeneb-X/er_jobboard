@@ -10,10 +10,10 @@
         public Configuration()
         {
 
-///////////////////Developer purpose only//////////////////////////////////////////////////
-            //Enable Automatic Migration
+ ///////////////////Developer purpose only//////////////////////////////////////////////////
+            //Automatic Migration Enabled
             AutomaticMigrationsEnabled = true;
-            //Enable Data loss
+            //Data loss Enabled
             AutomaticMigrationDataLossAllowed = true;
             ContextKey = "JobboardDBContext";
         }

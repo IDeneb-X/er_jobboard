@@ -449,7 +449,7 @@ namespace er_jobboard.Controllers
             {
                 return Redirect(returnUrl);
             }
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Index", "JobBoards");
         }
 
         internal class ChallengeResult : HttpUnauthorizedResult

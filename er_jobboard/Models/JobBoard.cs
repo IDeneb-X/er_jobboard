@@ -14,11 +14,13 @@ namespace er_jobboard.Models
         public int Id { get; set; }
 
         [Display(Name = "Job")]
+        [MaxLength(50)]
         [Required(ErrorMessage = "Required {0}")]
         [DataMember(IsRequired = true)]
         public string job { get; set; }
 
         [Display(Name = "Job title")]
+        [MaxLength(50)]
         [Required(ErrorMessage = "Required {0}")]
         [DataMember(IsRequired = true)]
         public string job_title { get; set; }
@@ -30,10 +32,12 @@ namespace er_jobboard.Models
         public string description { get; set; }
 
         [Display(Name = "Created At")]
+        [MaxLength(50)]
         [DataMember(IsRequired = true)]
         public string created_at { get; set; }
 
         [Display(Name = "Expires At")]
+        [MaxLength(50)]
         [DataMember(IsRequired = true)]
         public string expires_at { get; set; }
     }

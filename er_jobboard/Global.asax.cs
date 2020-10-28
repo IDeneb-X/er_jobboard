@@ -14,7 +14,7 @@ namespace er_jobboard
         protected void Application_Start()
         {
 ///////////////////Developer purpose only//////////////////////////////////////////////////
-            //Enable Automatic migracion at statar
+            //Enable Automatic migracion at the start
             Database.SetInitializer(
                 new MigrateDatabaseToLatestVersion<JobboardDBContext,
                 Migrations.Configuration>());

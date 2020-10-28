@@ -17,5 +17,5 @@ public class JobboardDBContext : DbContext
     {
     }
 
-    public System.Data.Entity.DbSet<er_jobboard.Models.JobBoard> JobBoards { get; set; }
+    public DbSet<er_jobboard.Models.JobBoard> JobBoards { get; set; }
 }
