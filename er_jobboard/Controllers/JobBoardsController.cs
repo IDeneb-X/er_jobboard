@@ -1,6 +1,11 @@
-﻿using System.Data.Entity;
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.Entity;
+using System.Linq;
 using System.Threading.Tasks;
 using System.Net;
+using System.Web;
 using System.Web.Mvc;
 using er_jobboard.Models;
 
@@ -42,7 +47,7 @@ namespace er_jobboard.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create([Bind(Include = "Id,job,job_title,description,created_at,Expires_at")] JobBoard jobBoard)
+        public async Task<ActionResult> Create([Bind(Include = "Id,job,job_title,description,created_at,expires_at")] JobBoard jobBoard)
         {
             if (ModelState.IsValid)
             {
@@ -74,7 +79,7 @@ namespace er_jobboard.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Edit([Bind(Include = "Id,job,job_title,description,created_at,Expires_at")] JobBoard jobBoard)
+        public async Task<ActionResult> Edit([Bind(Include = "Id,job,job_title,description,created_at,expires_at")] JobBoard jobBoard)
         {
             if (ModelState.IsValid)
             {
