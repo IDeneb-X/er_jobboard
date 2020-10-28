@@ -29,16 +29,12 @@
                     </a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"></a>
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false"> Operations <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li class="divider"></li>
-                        <li>@Html.ActionLink("Index", "Index", "JobBoards")</li>
+                        <li>@Html.ActionLink("Jobs", "Index", "JobBoards")</li>
                         <li class="divider"></li>
-                        <li>@Html.ActionLink("Timer", "Timer", "Management")</li>
-                        <li class="divider"></li>
-                        <li>@Html.ActionLink("Register", "Register", "")</li>
-                        <li class="divider"></li>
-                        <li>@Html.ActionLink("Register", "Register", "")</li>
+                        <li>@Html.ActionLink("Details", "Index", "JobBoards")</li>
                         <li class="divider"></li>
                     </ul>
                 </li>

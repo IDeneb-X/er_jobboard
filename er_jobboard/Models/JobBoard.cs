@@ -24,7 +24,8 @@ namespace er_jobboard.Models
         public string job_title { get; set; }
 
         [Display(Name = "Description")]
-        [MaxLength(100)]
+        [MaxLength(150)]
+        [DataType(DataType.MultilineText)]
         [DataMember(IsRequired = true)]
         public string description { get; set; }
 

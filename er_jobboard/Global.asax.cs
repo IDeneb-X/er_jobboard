@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -12,6 +13,12 @@ namespace er_jobboard
     {
         protected void Application_Start()
         {
+///////////////////Developer purpose only//////////////////////////////////////////////////
+            //Enable Automatic migracion at statar
+            Database.SetInitializer(
+                new MigrateDatabaseToLatestVersion<JobboardDBContext,
+                Migrations.Configuration>());
+
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
